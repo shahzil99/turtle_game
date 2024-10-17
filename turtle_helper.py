@@ -1,8 +1,8 @@
 import turtle
 
 
-# en funksjon som lager en turtle og returerer denne
-# den skal form som skilpadde og en farge.
+# A function that creates a turtle and returns it. 
+# It should have the shape of a turtle and a color.
 def create_turtle(color: str) -> turtle.Turtle:
     t = turtle.Turtle()
     t.color(color)
@@ -30,12 +30,12 @@ def write_text(t: turtle.Turtle, text: str, pos: tuple[int, int]) -> None:
 def set_players_ready(
     players: list[turtle.Turtle], start_left_pos: int, height_start_line: int
 ) -> None:
-    # Enkel versjon -> vet vi har to spillere
+    # A simple version -> we know there are two players.
     x = start_left_pos - 20
     y = 150
     for player in players:
         player.penup()
-        player.setheading(0)  # se mot høyre
+        player.setheading(0)  # Face to the right
         player.goto(x, y)
         y -= 300
 
@@ -47,7 +47,7 @@ def write_results(
     t.goto(pos[0], pos[1])
     t.write("RESULTATLISTE:")
     x, y = pos
-    y -= 20  # justere ned før vi starter med spiller
+    y -= 20  # Adjust down before we start with the player
     for idx, p in enumerate(result_list):
         t.goto(x, y)
         t.write(f"{idx+1}: {p.color()[0]}")
