@@ -1,0 +1,17 @@
+1. Game Setup
+    - lage 2 turtle som skal 'race' mot hverandre (ulik farge)
+    - må tegne opp start- og stopp linje på skjerm med tekst på toppen (start / stopp )
+    - plassere turtles i startposisjon bak start-streken
+
+2. Game Run (while-løkke)
+    - starter ved å trykke space
+    - oppdatere turtle x-posisjon med en random verdi mellom 1 - 20
+    - sjekke om en av turtle har kommet over målstreken
+          - sjekker om turlte har passert stop linjen sin x-posisjon
+          - hvis ja, break loop
+    - har vi en vinner avsluttes spillet og vi kaller på 'game ending'
+
+3. Game Ending
+    - finne x-posisjoner til alle turtles
+    - sjekke hvilken av x-posisjonene som er størst
+    - Skrive ut vinner på skjerm
